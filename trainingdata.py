@@ -1,13 +1,13 @@
 import mysql.connector
 from mysql.connector import Error
 
-def getall(name):
+def gettrainingdata():
 	try:
-		cnx = mysql.connector.connect(user='sql9273861', password='eCvI714qdd',
+		cnx = mysql.connector.connect(user='sql9284623', password='m8QTBgHjDr',
                               	host='sql9.freesqldatabase.com',
-                              	database='sql9273861')
+                              	database='sql9284623')
 		cursor = cnx.cursor()
-		query = "SELECT * FROM `" + name + "`"
+		query = "SELECT * FROM `CREDIT_DATA`"
 		cursor.execute(query)
 		fullrow = []
 		partrow = []
@@ -20,3 +20,5 @@ def getall(name):
 		return finalrow
 	except Error as e:
 		print("Error while connecting to MySQL database", e)
+
+def addnewtrainingdata():
