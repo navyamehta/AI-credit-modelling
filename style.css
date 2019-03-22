@@ -81,9 +81,9 @@ section.container .row {
   align-items: center;
   text-align: center;
   height: 350px;
-  background-image: ./shutterstock_530884774.jpg;
-  background-size: cover;
+  background-image: url("https://nulltx.com/wp-content/uploads/2018/08/shutterstock_530884774.jpg");
   background-position: center;
+  background-repeat: no-repeat
 }
 
 .jumbotron h2 {
