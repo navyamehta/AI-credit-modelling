@@ -23,3 +23,12 @@ def addnewtrainingdata(idnum, credutil, paymenthist, informalinc, histlength, de
 		cnx = mysql.connector.connect(user='sql9284623', password='m8QTBgHjDr',
                               	host='sql9.freesqldatabase.com',
                               	database='sql9284623')
+		querypart2 = "(id, credutil, paymenthist, informalinc, histlength, debtincomeratio, emplength, phoneusage)"
+		querypart3 = "VALUES (%d, %d, %d, %d, %d, %d, %d, %d)"
+		query = "INSERT INTO `CREDIT_DATA` " + querypart2 + " " + querypart3;
+		cursor.execute(query, (idnum, credutil, paymenthist, informalinc, histlength, debtincomeratio, emplength, phoneusage))
+   		cnx.commit()
+   		cursor.close()
+		cnx.close()
+	except Error as e:
+		print("Error while connecting to MySQL database", e)
