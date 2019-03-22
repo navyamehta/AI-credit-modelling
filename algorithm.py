@@ -45,11 +45,11 @@ emp_length_di = {"< 1 year": 0.5, "1 year": 1, "2 years": 2, "3 years": 3, "4 ye
 chosen_data = chosen_data.replace({"emp_length": emp_length_di})
 
 # One hot encoding:
+X = chosen_data.drop("loan_status", axis = 1)
+final_y = chosen_data.loan_status
+final_X = pd.get_dummies(X)
 
-X = chosen_data.loc[:, chosen_data.columns != 'loan_status']
-y = chosen_data.loc[:, chosen_data.columns == 'loan_status']
-
-os = SMOTE(random_state=0)
+os = SMOTE(random_state = 0)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
 columns = X_train.columns
 
@@ -64,10 +64,4 @@ print(rfe.support_)
 print(rfe.ranking_)
 
 
-# X = chosen_data.drop("loan_status", axis = 1)
-
-
-# final_y = chosen_data.loan_status
-
-# final_X = pd.get_dummies(X)
 # chosen_data.to_csv("updated.csv")
