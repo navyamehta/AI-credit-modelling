@@ -8,6 +8,8 @@ from sklearn.tree import DecisionTreeRegressor
 from xgboost import XGBRegressor
 from sklearn.impute import SimpleImputer
 from imblearn.over_sampling import SMOTE
+from sklearn.feature_selection import RFE
+from sklearn.linear_model import LogisticRegression
 
 
 # Loading data
@@ -55,7 +57,11 @@ os_data_X,os_data_y = os.fit_sample(X_train, y_train)
 os_data_X = pd.DataFrame(data=os_data_X,columns=columns)
 os_data_y= pd.DataFrame(data=os_data_y,columns=['loan_status'])
 
-
+logreg = LogisticRegression()
+rfe = RFE(logreg, 20)
+rfe = rfe.fit(os_data_X, os_data_y.values.ravel())
+print(rfe.support_)
+print(rfe.ranking_)
 
 
 # X = chosen_data.drop("loan_status", axis = 1)
