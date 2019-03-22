@@ -8,8 +8,8 @@ def getprediction(credutil, paymenthist, informalinc, histlength, debtincomerati
   temp = trainingdata.gettrainingdata()
   colling = ['id', 'credutil', 'paymenthist', 'informalinc', 'histlength', 'debtincomeratio', 'emplength', 'phoneusage']
   CreditData = pd.DataFrame(temp, columns = colling)
-  X = df[['credutil','paymenthist', 'informalinc', 'histlength', 'debtincomeratio', 'emplength', 'phoneusage']]
-  Y = df['id']
+  X = CreditData[['credutil','paymenthist', 'informalinc', 'histlength', 'debtincomeratio', 'emplength', 'phoneusage']]
+  Y = CreditData['id']
   regr = linear_model.LinearRegression()
   regr.fit(X, Y)
   print('Intercept: \n', regr.intercept_)
