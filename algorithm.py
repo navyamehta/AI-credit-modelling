@@ -7,6 +7,8 @@ from sklearn.tree import DecisionTreeRegressor
 
 from xgboost import XGBRegressor
 from sklearn.impute import SimpleImputer
+from imblearn.over_sampling import SMOTE
+
 
 # Loading data
 
@@ -42,9 +44,24 @@ chosen_data = chosen_data.replace({"emp_length": emp_length_di})
 
 # One hot encoding:
 
-X = chosen_data.drop("loan_status", axis = 1)
+X = chosen_data.loc[:, chosen_data.columns != 'loan_status']
+y = chosen_data.loc[:, chosen_data.columns == 'loan_status']
 
-final_y = chosen_data.loan_status
+os = SMOTE(random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
+columns = X_train.columns
 
-final_X = pd.get_dummies(X)
+os_data_X,os_data_y = os.fit_sample(X_train, y_train)
+os_data_X = pd.DataFrame(data=os_data_X,columns=columns)
+os_data_y= pd.DataFrame(data=os_data_y,columns=['loan_status'])
+
+
+
+
+# X = chosen_data.drop("loan_status", axis = 1)
+
+
+# final_y = chosen_data.loan_status
+
+# final_X = pd.get_dummies(X)
 # chosen_data.to_csv("updated.csv")
