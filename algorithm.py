@@ -1,6 +1,7 @@
 from imblearn.over_sampling import SMOTE
 from sklearn.feature_selection import RFE
 from sklearn.linear_model import LogisticRegression
+from sklearn import metrics
 
 # Loading data
 
@@ -27,7 +28,17 @@ print(rfe.ranking_)
 
 
 valuable = [final_X.columns[i] for i in range(0, len(final_X.columns)) if rfe.ranking_[i] == 1]
-print(valuable)
+X = os_data_X[valuable]
+y = os_data_y['loan_status']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
+logreg = LogisticRegression()
+logreg.fit(X_train, y_train)
+
+y_pred = logreg.predict(X_test)
+print('Accuracy of logistic regression classifier on test set: {:.2f}'.format(logreg.score(X_test, y_test)))
+
+
 
 # chosen_data.to_csv("updated.csv")
 
