@@ -4,7 +4,7 @@ from sklearn.linear_model import LogisticRegression
 
 # Loading data
 
-accepted_data_path = "clean_data.csv"
+accepted_data_path = "final_data.csv"
 
 accepted_data = pd.read_csv(accepted_data_path, engine="python")
 
