@@ -26,4 +26,8 @@ print(rfe.support_)
 print(rfe.ranking_)
 
 
+valuable = [final_X.columns[i] for i in range(0, len(final_X.columns)) if rfe.ranking_[i] == 1]
+print(valuable)
+
 # chosen_data.to_csv("updated.csv")
+
