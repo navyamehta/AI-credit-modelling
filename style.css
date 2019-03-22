@@ -8,13 +8,14 @@ ul {
   justify-content: flex-end;
 }
 
+figure {
+  margin-bottom: 30px;
+}
+
+
 figure img {
   width: 100%;
   height: auto;
-}
-
-figure {
-  margin-bottom: 30px;
 }
 
 header nav {
@@ -77,13 +78,13 @@ section.container .row {
 
 .jumbotron {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   height: 350px;
   background-image: url("https://nulltx.com/wp-content/uploads/2018/08/shutterstock_530884774.jpg");
   background-position: center;
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .jumbotron h2 {
@@ -102,8 +103,8 @@ section.container .row {
 }
 
 .btn-primary {
-  color: #2e6da4;
   background-color: #FFFFFF;
+  color: #2e6da4;
 }
 
 .col-sm-1 img {
