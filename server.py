@@ -1,10 +1,5 @@
-import newsbot
-import newsresults
-import classifier
-import trainer
-import chooser
+import algorithm
 from flask import Flask, request, render_template
-from sklearn.neural_network import MLPClassifier
 import getall
     
 
@@ -12,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/search', methods=["GET"])
 def my_form():
-    return render_template('WebPage1.html')
+    return render_template('MainPage.html')
 
 @app.route('/search', methods=['POST'])
 def my_form_post():
