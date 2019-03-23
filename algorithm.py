@@ -6,7 +6,9 @@ from sklearn.metrics import accuracy_score
 
 # Loading data
 
-def algorithm(loanamt, emplength, ):
+def algorithm(loan_amnt, emp_length, home_ownership, annual_inc, verification_status, loan_status, title, delinq_2yrs,
+             fico_range_low, fico_range_high, pub_rec, revol_bal, revol_util, tot_cur_bal, chargeoff_within_12_mths,
+             public_rec_bankruptcies, total_il_high_credit_limit):
   
   clean_data_path = "clean_data.csv"
   clean_data = pd.read_csv(clean_data_path, engine="python")
