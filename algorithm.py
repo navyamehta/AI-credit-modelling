@@ -6,6 +6,19 @@ from sklearn.metrics import accuracy_score
 
 # Loading data
 
+['Unnamed: 0', 'loan_amnt', 'emp_length', 'annual_inc', 'delinq_2yrs',
+       'fico_range_low', 'fico_range_high', 'pub_rec', 'revol_bal',
+       'revol_util', 'tot_cur_bal', 'chargeoff_within_12_mths',
+       'pub_rec_bankruptcies', 'total_il_high_credit_limit',
+       'home_ownership_ANY', 'home_ownership_MORTGAGE', 'home_ownership_OWN',
+       'home_ownership_RENT', 'verification_status_Not Verified',
+       'verification_status_Source Verified', 'verification_status_Verified',
+       'title_Business', 'title_Car financing',
+       'title_Credit card refinancing', 'title_Debt consolidation',
+       'title_Green loan', 'title_Home buying', 'title_Home improvement',
+       'title_Major purchase', 'title_Medical expenses',
+       'title_Moving and relocation', 'title_Other', 'title_Vacation']
+
 def algorithm(loan_amnt, emp_length, home_ownership, annual_inc, verification_status, loan_status, title, delinq_2yrs,
              fico_range_low, fico_range_high, pub_rec, revol_bal, revol_util, tot_cur_bal, chargeoff_within_12_mths,
              public_rec_bankruptcies, total_il_high_credit_limit):
