@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Credit Coast</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload landing">
+	<div id="page-wrapper">
+
+		<header id="header">
+			<h1 id="logo"><a href="index.html"><b>Credit Coast</b></a></h1>
+			<nav id="nav">
+				<ul>
+					<li><a href="about.html">About</a></li>
+					<!-- if not authenticated yet -->
+					<li><a href="register.html">Sign Up</a></li>
+					<li><a href="login.html">Sign In</a></li>
+					<!-- else if authenticated
+					<li>USERNAME</li>
+					<li><a href = 'logout.html'>Logout</a></li> -->
+				</ul>
+			</nav>
+		</header>
+
+		<section id="five" class="wrapper style2 special fade">
+			<div class="container">
+				<header>
+					<h2>Welcome,
+						<!-- USERNAME -->
+					</h2>
+					<p>Complete the following form to get your free credit score and make you eligible for a credit risk
+						rating</p>
+				</header>
+				<form method="post" action="dashboard-formsubmit.html" class="cta">
+					<div class="row gtr-uniform gtr-50" style="margin-left:22.5%">
+						<div class="col-8 col-12-xsmall"><input type="number" name="Phone Number" id="phonenum"
+								placeholder="Phone Number" /></div>
+						<div class="col-8 col-12-xsmall"><input type="number" name="SIN" id="SIN"
+								placeholder="SIN" /></div>
+						<div class="col-8 col-12-xsmall"><input type="number" name="Loan Amount" id="loanamt"
+								placeholder="Loan Required" /></div>
+						<div class="col-8 col-12-xsmall"><input type="number" name="Employed Years" id="empyears"
+								placeholder="Years Employed (Rounded Down)" /></div>
+						<div class="col-8 col-12-xsmall"><input type="number" name="Annual Income" id="annualincome"
+								placeholder="Annual Income" /></div>
+						<div class="col-8 col-12-xsmall"><input type="text" name="Home Address" id="homeaddr"
+								placeholder="Your Home Address" /></div>
+						
+						<div class="col-8 col-12-xsmall">Home Ownership Status</div>
+						<div class="col-8 col-12-xsmall">
+							<select name = "homeown" >
+								<option value = "rent">Rent</option>
+								<option value = "mortgage">Mortgage</option>
+								<option value = "own">Own</option>
+							</select>
+						</div>
+
+						<div class="col-8 col-12-xsmall">Purpose of Loan Requirement</div>
+						<div class="col-8 col-12-xsmall">
+							<select name = "purpose">
+								<option value = "title1">Business</option>
+								<option value = "title2">Car Financing</option>
+								<option value = "title3">Credit Card Refinancing</option>
+								<option value = "title4">Debt Consolidation</option>
+								<option value = "title5">Green Loan</option>
+								<option value = "title6">House Purchase</option>
+								<option value = "title7">Home Improvement</option>
+								<option value = "title8">Major Purchase</option>
+								<option value = "title9">Medical Expenses</option>
+								<option value = "title10">Moving/Relocation</option>
+								<option value = "title11">Vacation</option>
+								<option value = "title12">Other</option>
+							</select>
+						</div>
+
+						<div class="col-8 col-12-xsmall"><input type="submit" value="Get my free credit score now"
+								class="fit primary" /></div>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+				<li><a href="#" class="icon alt fa-github"><span class="label">Github</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Credit Coast. All rights reserved.</li>
+				<li>Design: <a href="about.html">Credit Coast Team</a></li>
+				<li><a href='legal.html'>LEGAL</a></li>
+			</ul>
+		</footer>
+
+	</div>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
