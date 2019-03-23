@@ -5,6 +5,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from xgboost import XGBClassifier
 from sklearn.metrics import accuracy_score
+import numpy
 
 # Loading clean data
 
@@ -119,6 +120,7 @@ def mlalg(loan_amnt, emp_length, home_ownership, annual_inc, verification_status
        
        y_pred = model.predict_proba(X_test) * 100
        result = y_pred[:, 0][0]
+       result = -53.76*numpy.log(result) + 668.87
        return result
     
 """ Sample Call

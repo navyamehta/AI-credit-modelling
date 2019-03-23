@@ -9,7 +9,7 @@ Base = declarative_base()
  
 ########################################################################
 class User(Base):
-	__tablename__ = "user_fin"
+	__tablename__ = "user_final"
  
 	id = Column(Integer, primary_key=True)
 	username = Column(String)
@@ -17,10 +17,10 @@ class User(Base):
 	name = Column(String)
 	loan_amnt = Column(Float)
 	emp_length = Column(Float)
-	home_ownership = Column(Float)
+	home_ownership = Column(String)
 	annual_inc = Column(Float)
-	verification_status = Column(Float)
-	title = Column(Float)
+	verification_status = Column(String)
+	title = Column(String)
 	delinq_2yrs = Column(Float)
 	fico_range_low = Column(Float)
 	fico_range_high = Column(Float)
